@@ -1,0 +1,28 @@
+import React from 'react'
+import { Text, View } from 'react-native';
+import { Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+
+function About(props) {
+    return (
+        <View style={{ flex: 1 }}>
+            <Header>
+                <Left>
+                    <Button transparent>
+                        <Icon name='arrow-back' onPress={() => { props.navigation.goBack() }} />
+                    </Button>
+                </Left>
+                <Body>
+                    <Title>About</Title>
+                </Body>
+                <Right>
+                    <Button transparent>
+                        <Icon name='menu' onPress={() => { props.navigation.toggleDrawer() }} />
+                    </Button>
+                </Right>
+            </Header>
+            <Text>This is about page ..............?</Text>
+        </View>
+    );
+}
+
+export default About;

@@ -1,0 +1,23 @@
+import React from 'react'
+import { View, Text } from 'react-native';
+import { Header, Body, Right, Button, Icon, Title } from 'native-base';
+
+function HomeScreen({ navigation }) {
+    return (
+        <View style={{ flex: 1 }}>
+            <Header>
+                <Body>
+                    <Title>Header</Title>
+                </Body>
+                <Right>
+                    <Button transparent>
+                        <Icon name='menu' onPress={() => { navigation.toggleDrawer() }} />
+                    </Button>
+                </Right>
+            </Header>
+            <Text>Home Page</Text>
+        </View>
+    );
+}
+
+export default HomeScreen;
